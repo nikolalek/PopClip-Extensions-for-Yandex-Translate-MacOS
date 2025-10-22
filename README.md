@@ -1,3 +1,5 @@
+[По Русски:](README.ru.md)
+
 # Yandex Translate PopClip Extension
 
 A PopClip extension for translating selected text using Yandex Translate with customizable source and target language selection.
