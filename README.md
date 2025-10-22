@@ -6,6 +6,8 @@ A PopClip extension for translating selected text using Yandex Translate with cu
 
 ![PopClip Extension](screenshots/PopClip_Extension1.png)
 
+![Extension Options](screenshots/Extension_Options.png)
+
 ![PopClip Extension](screenshots/PopClip_Extension2.png)
 
 ## Features
@@ -43,7 +45,7 @@ A PopClip extension for translating selected text using Yandex Translate with cu
 2. Click the "Перевести" (Translate) button in PopClip bar
 3. Yandex Translate app will open with your text ready for translation
 
-![Extension Options](screenshots/extension-options.png)
+![Extension Options](screenshots/Extension_Options.png)
 
 ## Configuration
 
