@@ -53,6 +53,12 @@ Access PopClip settings to customize:
 - PopClip 2021.11 or later
 - Yandex Translate app
 
+## Development
+
+This extension is built as a PopClip snippet using YAML configuration. The main files:
+
+- `YandexTranslate.snippet` - Main extension code
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](MIT License
