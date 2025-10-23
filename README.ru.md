@@ -1,4 +1,12 @@
-[English:](README.md)
+<!-- Other -->
+
+[vot-readme-ru]: README.ru.md
+[vot-readme-en]: README.md
+
+<!-- Content -->
+
+[![en][badge-en]][vot-readme-ru]
+[![ru][badge-ru]][vot-readme-en]
 
 # Расширение Яндекс Переводчик для PopClip
 
