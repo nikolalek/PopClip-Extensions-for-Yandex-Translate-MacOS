@@ -66,6 +66,7 @@ Access PopClip settings to customize:
 This extension is built as a PopClip snippet using YAML configuration. The main files:
 
 - [`YandexTranslate`](YandexTranslate.yaml) - Main extension code
+
 <!-- BEGIN:YandexTranslate -->
 <!-- END:YandexTranslate -->
 
