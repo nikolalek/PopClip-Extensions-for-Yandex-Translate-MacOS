@@ -18,57 +18,91 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
+      - name: Debug - List files
+        run: |
+          echo "=== Listing repository files ==="
+          ls -la
+          echo ""
+          echo "=== Content of YandexTranslate.yaml ==="
+          cat YandexTranslate.yaml
+          echo ""
+          echo "=== Checking README files ==="
+          if [ -f "README.md" ]; then
+            echo "README.md exists"
+            grep -n "BEGIN:YandexTranslate" README.md || echo "Marker BEGIN not found in README.md"
+            grep -n "END:YandexTranslate" README.md || echo "Marker END not found in README.md"
+          else
+            echo "README.md NOT found"
+          fi
+          if [ -f "README.ru.md" ]; then
+            echo "README.ru.md exists"
+            grep -n "BEGIN:YandexTranslate" README.ru.md || echo "Marker BEGIN not found in README.ru.md"
+            grep -n "END:YandexTranslate" README.ru.md || echo "Marker END not found in README.ru.md"
+          else
+            echo "README.ru.md NOT found"
+          fi
+        
       - name: Embed code into README files
         run: |
-          # Create temporary file with code block
-          echo '```
+          # Create code block with YAML content
+          echo '```yaml' > temp_code.txt
           cat YandexTranslate.yaml >> temp_code.txt
-          echo '```' >> temp_code.txt
+          echo '```
           
-          # Function to update a file
-          update_file() {
+          echo "=== Generated code block ==="
+          cat temp_code.txt
+          echo ""
+          
+          # Function to update file between markers
+          update_readme() {
             local file=$1
-            if [ -f "$file" ]; then
-              awk '
-                /<!-- BEGIN:YandexTranslate -->/ {
-                  print
-                  system("cat temp_code.txt")
-                  skip=1
-                  next
-                }
-                /<!-- END:YandexTranslate -->/ {
-                  skip=0
-                }
-                !skip
-              ' "$file" > "${file}.tmp"
-              mv "${file}.tmp" "$file"
-              echo "Updated $file"
-            else
-              echo "File $file not found, skipping"
+            
+            if [ ! -f "$file" ]; then
+              echo "ERROR: File $file not found"
+              return 1
             fi
+            
+            if ! grep -q "<!-- BEGIN:YandexTranslate -->" "$file"; then
+              echo "ERROR: BEGIN marker not found in $file"
+              return 1
+            fi
+            
+            if ! grep -q "<!-- END:YandexTranslate -->" "$file"; then
+              echo "ERROR: END marker not found in $file"
+              return 1
+            fi
+            
+            # Split file into parts and reconstruct
+            sed -n '1,/<!-- BEGIN:YandexTranslate -->/p' "$file" > "${file}.new"
+            cat temp_code.txt >> "${file}.new"
+            sed -n '/<!-- END:YandexTranslate -->/,$p' "$file" >> "${file}.new"
+            
+            mv "${file}.new" "$file"
+            echo "✓ Successfully updated $file"
           }
           
-          # Update both README files
-          update_file "README.md"
-          update_file "README.ru.md"
+          # Update both files
+          update_readme "README.md"
+          update_readme "README.ru.md"
           
           # Cleanup
-          rm temp_code.txt
+          rm -f temp_code.txt
           
-      - name: Check for changes
-        id: check_changes
+      - name: Show changes
         run: |
-          if git diff --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
+          echo "=== Git diff ==="
+          git diff
           
       - name: Commit and push if changed
-        if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md README.ru.md
-          git commit -m "docs: auto-update embedded YandexTranslate.yaml in README files"
-          git push
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add README.md README.ru.md
+            git commit -m "docs: auto-update embedded YandexTranslate.yaml"
+            git push
+            echo "✓ Changes committed and pushed"
+          fi
