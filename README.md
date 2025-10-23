@@ -35,7 +35,7 @@ A PopClip extension for translating selected text using Yandex Translate with cu
 ## Installation
 
 ### Method: Snippet Installation
-1. Copy the content from [`YandexTranslate.snippet`](YandexTranslate.snippet)
+1. Copy the content from [`YandexTranslate`](YandexTranslate.yaml)
 2. Select the text and click "Install Extension" in PopClip bar
 3. Configure your preferred languages in PopClip settings
 
