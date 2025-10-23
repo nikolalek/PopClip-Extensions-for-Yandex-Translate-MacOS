@@ -21,18 +21,18 @@ options:
     default value: auto
     values: [auto, ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
     value labels:
-      - Auto / Авто
-      - Russian / Русский
-      - English / Английский
-      - German / Немецкий
-      - French / Французский
-      - Spanish / Испанский
-      - Italian / Итальянский
-      - Chinese / 中文
-      - Japanese / 日本語
-      - Korean / 한국어
-      - Arabic / العربية
-      - Turkish / Türkçe
+      - "🌐 Auto / Авто"
+      - "🇷🇺 Russian / Русский"
+      - "🇬🇧 English / Английский"
+      - "🇩🇪 German / Немецкий"
+      - "🇫🇷 French / Французский"
+      - "🇪🇸 Spanish / Испанский"
+      - "🇮🇹 Italian / Итальянский"
+      - "🇨🇳 Chinese / 中文"
+      - "🇯🇵 Japanese / 日本語"
+      - "🇰🇷 Korean / 한국어"
+      - "🇸🇦 Arabic / العربية"
+      - "🇹🇷 Turkish / Türkçe"
   - identifier: target_language
     type: multiple
     label:
@@ -44,17 +44,17 @@ options:
     default value: ru
     values: [ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
     value labels:
-      - Russian / Русский
-      - English / Английский
-      - German / Немецкий
-      - French / Французский
-      - Spanish / Испанский
-      - Italian / Итальянский
-      - Chinese / 中文
-      - Japanese / 日本語
-      - Korean / 한국어
-      - Arabic / العربية
-      - Turkish / Türkçe
+      - "🇷🇺 Russian / Русский"
+      - "🇬🇧 English / Английский"
+      - "🇩🇪 German / Немецкий"
+      - "🇫🇷 French / Французский"
+      - "🇪🇸 Spanish / Испанский"
+      - "🇮🇹 Italian / Итальянский"
+      - "🇨🇳 Chinese / 中文"
+      - "🇯🇵 Japanese / 日本語"
+      - "🇰🇷 Korean / 한국어"
+      - "🇸🇦 Arabic / العربية"
+      - "🇹🇷 Turkish / Türkçe"
 actions:
   - title:
       en: Translate
