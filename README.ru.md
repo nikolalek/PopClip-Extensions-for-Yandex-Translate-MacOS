@@ -49,7 +49,7 @@
 ## Установка
 
 ### Способ 1: Установка снипета
-1. Скопируйте содержимое файла [`YandexTranslate`](YandexTranslate.yaml)
+1. Скопируйте содержимое файла [`YandexTranslate`](YandexTranslate.popclipext/Config.yaml)
 2. Выделите текст и нажмите "Установить расширение" в панели PopClip
 3. Настройте предпочитаемые языки в настройках PopClip
 
@@ -81,7 +81,7 @@
 
 Расширение создано как снипет PopClip с использованием YAML конфигурации. Основные файлы:
 
-- [`YandexTranslate`](YandexTranslate.yaml) - Основной код расширения
+- [`YandexTranslate`](YandexTranslate.popclipext/Config.yaml) - Основной код расширения
 ```yaml
 # popclip
 name:
