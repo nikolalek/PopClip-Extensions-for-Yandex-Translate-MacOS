@@ -1,4 +1,11 @@
-[![ru](https://img.shields.io/badge/язык-Русский-lightgrey?style=for-the-badge)](README.ru.md)
+<p align="center">
+  <span style="display:inline-block;background:#444;color:#fff;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:4px;">lang</span>
+  <span style="display:inline-block;background:#eee;color:#444;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:12px;">English 🇬🇧</span>
+  <span style="display:inline-block;background:#444;color:#fff;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:4px;">язык</span>
+  <span style="display:inline-block;background:#eee;color:#444;padding:3px 10px;border-radius:6px;font-family:sans-serif;">Русский 🇷🇺</span>
+</p>
+
+
 
 
 # Yandex Translate PopClip Extension
