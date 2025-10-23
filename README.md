@@ -42,7 +42,7 @@ A PopClip extension for translating selected text using Yandex Translate with cu
 3. Configure your preferred languages in PopClip settings
 
 ### Method 2: Extension Installation
-1. Download the extension [`YandexTranslate.popclipext`](https://github.com/nikolalek/PopClip-Extensions-for-Yandex-Translate-MacOS/raw/main/YandexTranslate.popclipext)
+1. Download the extension [`YandexTranslate.popclipext`](https://github.com/nikolalek/PopClip-Extensions-for-Yandex-Translate-MacOS/raw/refs/heads/main/YandexTranslate.popclipextz)
 
 2. Double-click the `YandexTranslate.popclipext` file to install it
 3. Configure your preferred languages in PopClip settings

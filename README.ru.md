@@ -43,7 +43,7 @@
 3. Настройте предпочитаемые языки в настройках PopClip
 
 ### Способ 2: Установка расширения
-1. Скачайте расширение [`YandexTranslate.popclipext`](https://github.com/nikolalek/PopClip-Extensions-for-Yandex-Translate-MacOS/raw/main/YandexTranslate.popclipext)
+1. Скачайте расширение [`YandexTranslate.popclipext`](https://github.com/nikolalek/PopClip-Extensions-for-Yandex-Translate-MacOS/raw/refs/heads/main/YandexTranslate.popclipextz)
 
 2. Дважды щёлкните по файлу `YandexTranslate.popclipext`, чтобы установить его
 3. Настройте предпочитаемые языки в настройках PopClip
