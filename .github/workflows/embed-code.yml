@@ -45,11 +45,9 @@ jobs:
       - name: Embed code into README files
         shell: bash
         run: |
-          BACKTICKS='```
-          
-          echo "${BACKTICKS}yaml" > temp_code.txt
+          printf '%s\n' '```
           cat YandexTranslate.yaml >> temp_code.txt
-          echo "${BACKTICKS}" >> temp_code.txt
+          printf '%s\n' '```' >> temp_code.txt
           
           echo "=== Generated code block ==="
           cat temp_code.txt
