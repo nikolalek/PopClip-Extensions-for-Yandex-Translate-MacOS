@@ -7,9 +7,20 @@
 
 Расширение PopClip для перевода выделенного текста с помощью Яндекс Переводчика с возможностью выбора исходного и целевого языков.
 
+## Скриншоты
+
+### Окно установки расширения
+При копировании сниппета PopClip отображает окно установки.
+
 ![PopClip Extension](screenshots/PopClip_Extension1.png)
 
+### Окно настроек
+Настройка исходного и целевого языка для перевода.
+
 ![Extension Options](screenshots/Extension_Options.png)
+
+### Панель PopClip в действии
+Кнопка перевода появляется при выделении текста.
 
 ![PopClip Extension](screenshots/PopClip_Extension2.png)
 

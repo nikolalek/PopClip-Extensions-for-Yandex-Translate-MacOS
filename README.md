@@ -6,9 +6,20 @@
 
 A PopClip extension for translating selected text using Yandex Translate with customizable source and target language selection.
 
+## Screenshots
+
+### Extension Installation Dialog
+When copying the snippet, PopClip displays the installation window.
+
 ![PopClip Extension](screenshots/PopClip_Extension1.png)
 
+### Extension Settings
+Configure source and target languages for translation.
+
 ![Extension Options](screenshots/Extension_Options.png)
+
+### PopClip Bar in Action
+The translation button appears when you select text.
 
 ![PopClip Extension](screenshots/PopClip_Extension2.png)
 
