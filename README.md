@@ -1,5 +1,6 @@
-[![en](.github/assets/badge-en.png)](README.md)
-[![ru](.github/assets/badge-ru.png)](README.ru.md)
+[![en](https://img.shields.io/badge/lang-English-blue?style=for-the-badge)](README.md)
+[![ru](https://img.shields.io/badge/язык-Русский-lightgrey?style=for-the-badge)](README.ru.md)
+
 
 
 # Yandex Translate PopClip Extension
