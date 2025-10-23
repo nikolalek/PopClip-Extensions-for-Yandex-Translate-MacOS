@@ -82,7 +82,7 @@ This extension is built as a PopClip snippet using YAML configuration. The main 
 
 - [`YandexTranslate`](YandexTranslate.popclipext/Config.yaml) - Main extension code
 ```yaml
-# popclip
+#popclip
 name:
   en: Yandex Translate
   ru: Яндекс Переводчик
@@ -100,23 +100,35 @@ options:
       en: Source language
       ru: Исходный язык
     description:
-      en: Choose source language (auto = detect automatically)
-      ru: Выберите исходный язык (auto = автоопределение)
+      en: "Choose source language:\n(auto = detect automatically)"
+      ru: "Выберите исходный язык:\n(auto = автоопределение языка)"
     default value: auto
-    values: [auto, ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
+    values:
+      - auto
+      - ru
+      - en
+      - de
+      - fr
+      - es
+      - it
+      - zh
+      - ja
+      - ko
+      - ar
+      - tr
     value labels:
-      - "🌐 Auto / Авто"
-      - "🇷🇺 Russian / Русский"
-      - "🇬🇧 English / Английский"
-      - "🇩🇪 German / Немецкий"
-      - "🇫🇷 French / Французский"
-      - "🇪🇸 Spanish / Испанский"
-      - "🇮🇹 Italian / Итальянский"
-      - "🇨🇳 Chinese / 中文"
-      - "🇯🇵 Japanese / 日本語"
-      - "🇰🇷 Korean / 한국어"
-      - "🇸🇦 Arabic / العربية"
-      - "🇹🇷 Turkish / Türkçe"
+      - "\U0001F310 Auto / Авто"
+      - "\U0001F1F7\U0001F1FA Russian / Русский"
+      - "\U0001F1EC\U0001F1E7 English / Английский"
+      - "\U0001F1E9\U0001F1EA German / Немецкий"
+      - "\U0001F1EB\U0001F1F7 French / Французский"
+      - "\U0001F1EA\U0001F1F8 Spanish / Испанский"
+      - "\U0001F1EE\U0001F1F9 Italian / Итальянский"
+      - "\U0001F1E8\U0001F1F3 Chinese / 中文"
+      - "\U0001F1EF\U0001F1F5 Japanese / 日本語"
+      - "\U0001F1F0\U0001F1F7 Korean / 한국어"
+      - "\U0001F1F8\U0001F1E6 Arabic / العربية"
+      - "\U0001F1F9\U0001F1F7 Turkish / Türkçe"
   - identifier: target_language
     type: multiple
     label:
@@ -126,19 +138,30 @@ options:
       en: Choose target language
       ru: Выберите язык перевода
     default value: ru
-    values: [ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
+    values:
+      - ru
+      - en
+      - de
+      - fr
+      - es
+      - it
+      - zh
+      - ja
+      - ko
+      - ar
+      - tr
     value labels:
-      - "🇷🇺 Russian / Русский"
-      - "🇬🇧 English / Английский"
-      - "🇩🇪 German / Немецкий"
-      - "🇫🇷 French / Французский"
-      - "🇪🇸 Spanish / Испанский"
-      - "🇮🇹 Italian / Итальянский"
-      - "🇨🇳 Chinese / 中文"
-      - "🇯🇵 Japanese / 日本語"
-      - "🇰🇷 Korean / 한국어"
-      - "🇸🇦 Arabic / العربية"
-      - "🇹🇷 Turkish / Türkçe"
+      - "\U0001F1F7\U0001F1FA Russian / Русский"
+      - "\U0001F1EC\U0001F1E7 English / Английский"
+      - "\U0001F1E9\U0001F1EA German / Немецкий"
+      - "\U0001F1EB\U0001F1F7 French / Французский"
+      - "\U0001F1EA\U0001F1F8 Spanish / Испанский"
+      - "\U0001F1EE\U0001F1F9 Italian / Итальянский"
+      - "\U0001F1E8\U0001F1F3 Chinese / 中文"
+      - "\U0001F1EF\U0001F1F5 Japanese / 日本語"
+      - "\U0001F1F0\U0001F1F7 Korean / 한국어"
+      - "\U0001F1F8\U0001F1E6 Arabic / العربية"
+      - "\U0001F1F9\U0001F1F7 Turkish / Türkçe"
 actions:
   - title:
       en: Translate
