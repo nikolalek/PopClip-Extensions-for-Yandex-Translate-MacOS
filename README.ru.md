@@ -63,7 +63,7 @@
 
 Расширение создано как снипет PopClip с использованием YAML конфигурации. Основные файлы:
 
-- [`YandexTranslate.snippet`](YandexTranslate.yaml) - Основной код расширения
+- [`YandexTranslate`](YandexTranslate.yaml) - Основной код расширения
 
 ```
 # popclip
