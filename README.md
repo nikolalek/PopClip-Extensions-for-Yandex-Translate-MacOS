@@ -68,7 +68,6 @@ This extension is built as a PopClip snippet using YAML configuration. The main 
 - [`YandexTranslate`](YandexTranslate.yaml) - Main extension code
 ```yaml
 # popclip
-
 name:
   en: Yandex Translate
   ru: Яндекс Переводчик
