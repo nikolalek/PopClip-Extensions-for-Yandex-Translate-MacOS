@@ -1,5 +1,6 @@
 [![en](https://img.shields.io/badge/lang-English-blue?style=for-the-badge)](README.md)
 
+
 # Расширение Яндекс Переводчик для PopClip
 
 Расширение PopClip для перевода выделенного текста с помощью Яндекс Переводчика с возможностью выбора исходного и целевого языков.
