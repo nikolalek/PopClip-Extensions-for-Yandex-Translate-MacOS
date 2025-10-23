@@ -68,7 +68,7 @@
 
 - [`YandexTranslate`](YandexTranslate.yaml) - Основной код расширения
 
-```
+``` yaml
 # popclip
 name:
   en: Yandex Translate
