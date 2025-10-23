@@ -1,12 +1,7 @@
 <p align="center">
-  <span style="display:inline-block;background:#444;color:#fff;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:4px;">lang</span>
-  <span style="display:inline-block;background:#eee;color:#444;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:12px;">English 🇬🇧</span>
-  <span style="display:inline-block;background:#444;color:#fff;padding:3px 10px;border-radius:6px;font-family:sans-serif;margin-right:4px;">язык</span>
-  <span style="display:inline-block;background:#eee;color:#444;padding:3px 10px;border-radius:6px;font-family:sans-serif;">Русский 🇷🇺</span>
+  <a href="README.md"><img src="https://img.shields.io/badge/lang-English 🇬🇧-blue?style=for-the-badge"></a>
+  <a href="README.ru.md"><img src="https://img.shields.io/badge/язык-Русский 🇷🇺-blue?style=for-the-badge"></a>
 </p>
-
-
-
 
 # Yandex Translate PopClip Extension
 

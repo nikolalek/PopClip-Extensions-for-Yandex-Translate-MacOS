@@ -1,4 +1,7 @@
-[![en](https://img.shields.io/badge/lang-English-blue?style=for-the-badge)](README.md)
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/lang-English 🇬🇧-blue?style=for-the-badge"></a>
+  <a href="README.ru.md"><img src="https://img.shields.io/badge/язык-Русский 🇷🇺-blue?style=for-the-badge"></a>
+</p>
 
 
 # Расширение Яндекс Переводчик для PopClip
