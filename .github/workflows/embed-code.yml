@@ -43,17 +43,18 @@ jobs:
           fi
         
       - name: Embed code into README files
+        shell: bash
         run: |
-          # Create code block with YAML content
-          echo '```yaml' > temp_code.txt
+          BACKTICKS='```
+          
+          echo "${BACKTICKS}yaml" > temp_code.txt
           cat YandexTranslate.yaml >> temp_code.txt
-          echo '```
+          echo "${BACKTICKS}" >> temp_code.txt
           
           echo "=== Generated code block ==="
           cat temp_code.txt
           echo ""
           
-          # Function to update file between markers
           update_readme() {
             local file=$1
             
@@ -72,7 +73,6 @@ jobs:
               return 1
             fi
             
-            # Split file into parts and reconstruct
             sed -n '1,/<!-- BEGIN:YandexTranslate -->/p' "$file" > "${file}.new"
             cat temp_code.txt >> "${file}.new"
             sed -n '/<!-- END:YandexTranslate -->/,$p' "$file" >> "${file}.new"
@@ -81,11 +81,9 @@ jobs:
             echo "✓ Successfully updated $file"
           }
           
-          # Update both files
           update_readme "README.md"
           update_readme "README.ru.md"
           
-          # Cleanup
           rm -f temp_code.txt
           
       - name: Show changes
