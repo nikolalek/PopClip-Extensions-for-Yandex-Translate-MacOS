@@ -1,4 +1,4 @@
-[In English:](README.md)
+[English:](README.md)
 
 # Расширение Яндекс Переводчик для PopClip
 

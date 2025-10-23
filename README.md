@@ -1,4 +1,4 @@
-[По Русски:](README.ru.md)
+[Русский:](README.ru.md)
 
 # Yandex Translate PopClip Extension
 
