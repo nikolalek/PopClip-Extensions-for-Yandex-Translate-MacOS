@@ -16,8 +16,8 @@ options:
       en: Source language
       ru: Исходный язык
     description:
-      en: Choose source language (auto = detect automatically)
-      ru: Выберите исходный язык (auto = автоопределение)
+      en: Choose source language (auto - detect automatically)
+      ru: Выберите исходный язык (auto - автоопределение)
     default value: auto
     values: [auto, ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
     value labels:
