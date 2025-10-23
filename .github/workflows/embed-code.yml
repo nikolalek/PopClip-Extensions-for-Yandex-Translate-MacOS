@@ -1,0 +1,74 @@
+name: Embed YandexTranslate.yaml into README files
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'YandexTranslate.yaml'
+      - 'README.md'
+      - 'README.ru.md'
+      - '.github/workflows/embed-code.yml'
+  workflow_dispatch:
+
+jobs:
+  embed:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Embed code into README files
+        run: |
+          # Create temporary file with code block
+          echo '```
+          cat YandexTranslate.yaml >> temp_code.txt
+          echo '```' >> temp_code.txt
+          
+          # Function to update a file
+          update_file() {
+            local file=$1
+            if [ -f "$file" ]; then
+              awk '
+                /<!-- BEGIN:YandexTranslate -->/ {
+                  print
+                  system("cat temp_code.txt")
+                  skip=1
+                  next
+                }
+                /<!-- END:YandexTranslate -->/ {
+                  skip=0
+                }
+                !skip
+              ' "$file" > "${file}.tmp"
+              mv "${file}.tmp" "$file"
+              echo "Updated $file"
+            else
+              echo "File $file not found, skipping"
+            fi
+          }
+          
+          # Update both README files
+          update_file "README.md"
+          update_file "README.ru.md"
+          
+          # Cleanup
+          rm temp_code.txt
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md README.ru.md
+          git commit -m "docs: auto-update embedded YandexTranslate.yaml in README files"
+          git push
