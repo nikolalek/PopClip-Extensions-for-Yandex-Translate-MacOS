@@ -48,7 +48,7 @@ The translation button appears when you select text.
 ## Installation
 
 ### Method 1: Snippet Installation
-1. Copy the content from [`YandexTranslate`](YandexTranslate.yaml)
+1. Copy the content from [`YandexTranslate`](YandexTranslate.popclipext/Config.yaml)
 2. Select the text and click "Install Extension" in PopClip bar
 3. Configure your preferred languages in PopClip settings
 
@@ -80,7 +80,7 @@ Access PopClip settings to customize:
 
 This extension is built as a PopClip snippet using YAML configuration. The main files:
 
-- [`YandexTranslate`](YandexTranslate.yaml) - Main extension code
+- [`YandexTranslate`](YandexTranslate.popclipext/Config.yaml) - Main extension code
 ```yaml
 # popclip
 name:
