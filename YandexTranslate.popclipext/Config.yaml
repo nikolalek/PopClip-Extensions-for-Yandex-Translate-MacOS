@@ -2,85 +2,93 @@
 name:
   en: Yandex Translate
   ru: Яндекс Переводчик
+  de: Yandex Übersetzer
+  fr: Yandex Traducteur
+  es: Yandex Traductor
+  it: Yandex Traduttore
+  zh: Yandex 翻译
+  ja: Yandex 翻訳
+  ko: Yandex 번역
+  ar: ياندكس الترجمة
+  tr: Yandex Çeviri
+identifier: ru.nikolalek.extension.yandex.translate
+icon: iconify:material-symbols:translate-rounded
+# @version 1.0.2
+# @author nikolalek
+# @license MIT
+# @see https://apps.apple.com/app/yandex-translate/id584291439
 description:
-  en: Translate selected text in Yandex Translate with automatic source detection.
-  ru: Перевести выделенный текст в Яндекс Переводчике с автоопределением языка.
-icon: data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><g fill-rule="evenodd" class="ytranslate"><path d="M247.133 102.306c-4.227-9.812-12.178-17.623-22.14-21.728 1.81-8.01 2.415-14.619 2.616-19.024h-18.115c-.302 4.706-1.006 9.512-2.013 14.118-14.089-2.003-29.99 0-45.287 5.407-1.71-9.813-2.818-19.025-3.421-27.035 54.445-3.004 86.548-15.82 88.058-16.521l-6.844-16.221s-30.795 12.015-81.818 15.02c0-12.117-.403-12.016.201-16.122l-18.115-.2c-.402 3.404-.302 7.009-.201 17.022h-1.71c-16.304 0-31.4-1.202-35.023-1.502L100 53.443c5.334.4 21.637 1.302 36.23 1.302h4.528c.705 9.913 2.013 21.528 4.428 34.144-24.052 14.018-43.173 41.053-33.411 63.081 4.025 9.212 11.976 15.42 22.14 16.722 1.811.2 3.623.4 5.434.4 10.366 0 22.241-4.105 33.614-11.114 4.025 6.108 8.755 11.815 13.988 17.022l12.48-12.917s-5.435-5.006-12.077-14.919c14.592-13.617 25.864-30.44 32.808-49.163 4.025 2.303 8.05 5.707 10.265 10.914 7.346 17.522-3.22 37.849-13.083 46.66l12.378 13.017c16.304-14.72 27.474-42.155 17.511-66.286zm-109.6 49.49a10.04 10.04 0 0 1-8.507-6.186c-4.305-10.176 5.33-26.636 21.523-37.61 4.1 13.967 9.224 25.938 14.451 35.515-9.839 5.986-19.986 9.378-27.467 8.28zm44.686-24.934L178.164 131c-4.46-8.867-8.92-19.506-12.164-32.117 11.759-4.531 24.43-6.502 37-5.714-4.764 12.414-11.86 23.842-20.78 33.792v-.099z" class="ytranslate"/><path d="M63.457 83 5 218h23.982l14.39-35.993h59.256L117.018 218H141L82.443 83zm8.994 27L94 163H51z" class="ytranslate"/></g></svg>
+  en: "Translate selected text in Yandex Translate app"
+  ru: "Перевод выделенного текста в приложении Яндекс Переводчик"
+  de: "Übersetzen Sie markierten Text in der Yandex Übersetzer-App"
+  fr: "Traduire le texte sélectionné dans l'application Yandex Traducteur"
+  es: "Traducir el texto seleccionado en la aplicación Yandex Traductor"
+  it: "Traduci il testo selezionato nell'app Yandex Traduttore"
+  zh: "在 Yandex 翻译应用中翻译选定的文本"
+  ja: "選択したテキストをYandex翻訳アプリで翻訳"
+  ko: "Yandex 번역 앱에서 선택한 텍스트 번역"
+  ar: "ترجمة النص المحدد في تطبيق ياندكس الترجمة"
+  tr: "Seçili metni Yandex Çeviri uygulamasında çevirin"
+app:
+  name: Yandex Translate
+  link: https://apps.apple.com/app/yandex-translate/id584291439
+  check installed: true
+  bundle identifiers:
+   - ru.yandex.mobile.translate  
 options title:
-  en: Options for Yandex Translate
-  ru: Параметры расширения
+  en: Translation Settings
+  ru: Настройки перевода
+  de: Übersetzungseinstellungen
+  fr: Paramètres de traduction
+  es: Configuración de traducción
+  it: Impostazioni di traduzione
+  zh: 翻译设置
+  ja: 翻訳設定
+  ko: 번역 설정
+  ar: إعدادات الترجمة
+  tr: Çeviri Ayarları
 options:
-  - identifier: source_language
-    type: multiple
-    label:
-      en: Source language
-      ru: Исходный язык
-    description:
-      en: "Choose source language:\n(auto = detect automatically)"
-      ru: "Выберите исходный язык:\n(auto = автоопределение языка)"
-    default value: auto
-    values:
-      - auto
-      - ru
-      - en
-      - de
-      - fr
-      - es
-      - it
-      - zh
-      - ja
-      - ko
-      - ar
-      - tr
-    value labels:
-      - "\U0001F310 Auto / Авто"
-      - "\U0001F1F7\U0001F1FA Russian / Русский"
-      - "\U0001F1EC\U0001F1E7 English / Английский"
-      - "\U0001F1E9\U0001F1EA German / Немецкий"
-      - "\U0001F1EB\U0001F1F7 French / Французский"
-      - "\U0001F1EA\U0001F1F8 Spanish / Испанский"
-      - "\U0001F1EE\U0001F1F9 Italian / Итальянский"
-      - "\U0001F1E8\U0001F1F3 Chinese / 中文"
-      - "\U0001F1EF\U0001F1F5 Japanese / 日本語"
-      - "\U0001F1F0\U0001F1F7 Korean / 한국어"
-      - "\U0001F1F8\U0001F1E6 Arabic / العربية"
-      - "\U0001F1F9\U0001F1F7 Turkish / Türkçe"
   - identifier: target_language
     type: multiple
     label:
-      en: Target language
-      ru: Целевой язык
-    description:
-      en: Choose target language
-      ru: Выберите язык перевода
+      en: Target Language
+      ru: Язык перевода
+      de: Zielsprache
+      fr: Langue cible
+      es: Idioma de destino
+      it: Lingua di destinazione
+      zh: 目标语言
+      ja: 翻訳先言語
+      ko: 대상 언어
+      ar: اللغة الهدف
+      tr: Hedef Dil
     default value: ru
-    values:
-      - ru
-      - en
-      - de
-      - fr
-      - es
-      - it
-      - zh
-      - ja
-      - ko
-      - ar
-      - tr
+    values: [ru, en, de, fr, es, it, zh, ja, ko, ar, tr]
     value labels:
-      - "\U0001F1F7\U0001F1FA Russian / Русский"
-      - "\U0001F1EC\U0001F1E7 English / Английский"
-      - "\U0001F1E9\U0001F1EA German / Немецкий"
-      - "\U0001F1EB\U0001F1F7 French / Французский"
-      - "\U0001F1EA\U0001F1F8 Spanish / Испанский"
-      - "\U0001F1EE\U0001F1F9 Italian / Итальянский"
-      - "\U0001F1E8\U0001F1F3 Chinese / 中文"
-      - "\U0001F1EF\U0001F1F5 Japanese / 日本語"
-      - "\U0001F1F0\U0001F1F7 Korean / 한국어"
-      - "\U0001F1F8\U0001F1E6 Arabic / العربية"
-      - "\U0001F1F9\U0001F1F7 Turkish / Türkçe"
+      - 🇷🇺 Русский
+      - 🇬🇧 English
+      - 🇩🇪 Deutsch
+      - 🇫🇷 Français
+      - 🇪🇸 Español
+      - 🇮🇹 Italiano
+      - 🇨🇳 中文
+      - 🇯🇵 日本語
+      - 🇰🇷 한국어
+      - 🇸🇦 العربية
+      - 🇹🇷 Türkçe
 actions:
   - title:
       en: Translate
       ru: Перевести
-    url: "yandextranslate://translate?text={popclip text}&from={popclip option source_language}&to={popclip option target_language}"
+      de: Übersetzen
+      fr: Traduire
+      es: Traducir
+      it: Tradurre
+      zh: 翻译
+      ja: 翻訳
+      ko: 번역
+      ar: ترجمة
+      tr: Çevir
+    requirements: [text]
+    url: "yandextranslate://translate?text={popclip text}&from=auto&to={popclip option target_language}"
     clean query: true
